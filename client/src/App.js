@@ -2,16 +2,34 @@ import React, { Component } from 'react';
 import NavbarComponent from './components/Navbar'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
-import ProductCard from './components/ProductCard'
+import Profile from './components/Profile'
+import Store from './components/Store'
+import Home from './components/Home'
+import About from './components/About'
+import Cart from './components/Cart'
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div>
         <NavbarComponent/>
-        <LoginForm />
-        <RegisterForm />
-        <ProductCard />
+
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/store" component={Store} />
+            <Route path="/about" component={About} />
+            <Route path="/login" component={LoginForm} />
+            <Route path="/register" component={RegisterForm} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/cart" component={Cart} />
+        </Switch>
+
+      
+        {/* <LoginForm /> */}
+        {/* <RegisterForm /> */}
+        {/* <ProductCard /> */}
+        {/* <Store /> */}
       </div>
     )
   }
