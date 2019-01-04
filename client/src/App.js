@@ -7,6 +7,7 @@ import Store from './components/Store'
 import Home from './components/Home'
 import About from './components/About'
 import Cart from './components/Cart'
+import Footer from './components/Footer/Footer'
 import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -25,11 +26,7 @@ class App extends Component {
             <Route path="/cart" component={Cart} />
         </Switch>
 
-      
-        {/* <LoginForm /> */}
-        {/* <RegisterForm /> */}
-        {/* <ProductCard /> */}
-        {/* <Store /> */}
+        <Footer />
       </div>
     )
   }
