@@ -20,10 +20,9 @@
   "homepage": "https://github.com/jmc90/vcommerce#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
     "mongoose": "^5.4.2",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9"
   }
 }
-
-
