@@ -13,6 +13,7 @@ import {
   Button, 
   DropdownItem,
  } from 'reactstrap';
+ import {Link} from 'react-router-dom'
 
  class NavbarComponent extends Component {
   constructor(props) {
@@ -32,40 +33,22 @@ import {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">vCommerceStore.com</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                  <Link to="/"> Home </Link>
+                  <Link to="/store"> Store </Link>
+                  <Link to="/about"> About </Link>
+                  <Link to="/cart"> Cart</Link>
+                  <Link to="/profile"> Profile</Link>
+                  <Link to="/register"> Register</Link>
+                  <Link to="/login"> Login</Link>
               </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
-
-        <Button style={{backgroundColor:'red'}}> SUBMIT
-        </Button>
-
         
       </div>
     );
