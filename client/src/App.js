@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavbarComponent from './components/Navbar'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
+import Store from './components/Store'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <NavbarComponent/>
         <LoginForm />
         <RegisterForm />
+        <Store />
       </div>
     )
   }
