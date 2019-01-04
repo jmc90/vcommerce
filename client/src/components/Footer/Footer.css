@@ -1,0 +1,138 @@
+.footer {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5px;
+  background: grey;
+  color: white;
+  font-family: "Roboto";
+}
+.footer .grid1 {
+  text-align: center;
+  background: grey;
+}
+.footer .grid2 {
+  text-align: center;
+  background: grey;
+}
+.grid3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background: grey;
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscribe input {
+  width: 65%;
+  height: 35px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .footer {
+    height: 100%;
+  }
+  .footer .grid1 {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+  .grid2 {
+    font-size: 15px;
+  }
+  .subscribe h2 {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+  .subscribe input {
+    width: 90%;
+    height: 25px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 561px) {
+  .grid1 h2 {
+    font-size: 15px;
+  }
+  .footer .grid1 {
+    font-size: 15px;
+  }
+  .grid2 h2 {
+    font-size: 15px;
+  }
+  .grid2 {
+    font-size: 15px;
+  }
+  .subscribe input {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 560px) and (min-width: 425px) {
+  .grid1 h2 {
+    font-size: 13px;
+  }
+  .footer .grid1 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .grid1 {
+    font-size: 12px;
+  }
+  .grid2 h2 {
+    font-size: 12px;
+  }
+  .grid2 {
+    font-size: 12px;
+  }
+  .subscribe input {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+  .subscribe h2 {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 424px) {
+  .grid1 h2 {
+    font-size: 10px;
+  }
+  .footer .grid1 {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0;
+    margin-right: 10px;
+  }
+  .grid1 {
+    font-size: 10px;
+  }
+  .grid2 h2 {
+    font-size: 10px;
+  }
+  .grid2 {
+    font-size: 10px;
+  }
+  .subscribe input {
+    font-size: 10px;
+    padding: 0 10px;
+    width: 100%;
+    height: 25px;
+    margin-top: 15px;
+  }
+  .subscribe h2 {
+    text-align: center;
+    font-size: 10px;
+  }
+  .footer .brands p {
+    font-size: 15px;
+  }
+  .footer h5 {
+    font-size: 8px;
+  }
+}

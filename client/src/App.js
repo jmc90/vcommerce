@@ -3,6 +3,7 @@ import NavbarComponent from './components/Navbar'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import ProductCard from './components/ProductCard'
+import Footer from './components/Footer/Footer'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <LoginForm />
         <RegisterForm />
         <ProductCard />
+        <Footer />
       </div>
     )
   }
