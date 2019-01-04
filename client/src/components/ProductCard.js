@@ -18,11 +18,12 @@ import { withProducts } from '../context/ProductProvider'
                 let subtitle = item.subtitle
                 let price = item.price
                 let description = item.description
+                let image = item.imageUrl
             
                 return (
                     <div style={{width: '318px'}} className='productCard'>
                         <Card>
-                            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                            <CardImg top width="100%" height='200px' src={image} alt="Card image cap" />
                             <CardBody>
                             <h4> {title} </h4>
                             <CardSubtitle> {subtitle} </CardSubtitle>
