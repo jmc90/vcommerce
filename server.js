@@ -1,15 +1,18 @@
 const express = require('express')
 const app = express()
+require("dotenv").config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const expressJwt = require("express-jwt")
 const PORT = process.env.PORT || 8000
 
 // Middleware
 app.use(express.json()) 
 app.use(morgan('dev')) 
+app.use('/api', expressJwt({secret: process.env.SECRET}))
 
 //Routes
-// app.use('/items', require('./routes/item'))
+app.use('/auth', require('./routes/auth'))
 
 // Mongoose Connect
 mongoose.connect('mongodb://localhost:27017/vcommerce', {useNewUrlParser: true}, () => {
@@ -18,8 +21,10 @@ mongoose.connect('mongodb://localhost:27017/vcommerce', {useNewUrlParser: true},
 
 // Global server error handler
 app.use((err, req, res, next) => {  
-    // console.log(err)
-    return res.send({errMsg: err.message})
+    if(err.name === "UnauthorizedError"){
+        res.status(err.status)
+    }
+    return res.send({errMsg: err.message}) 
 })
 
 // Server
