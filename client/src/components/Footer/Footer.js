@@ -17,7 +17,7 @@ const Footer = () => {
           <h4 class="footer-list-header">Products</h4>
         </li>
         <li>
-          <a href="/Angels/cat/id/70" class="generic-anchor footer-list-anchor">
+          <a href="/xxxx" class="generic-anchor footer-list-anchor">
             GPU's
           </a>
         </li>
@@ -28,9 +28,8 @@ const Footer = () => {
         </li>
         <li>
           <a
-            href="/shop/about-contact"
+            href="/xxxx"
             class="generic-anchor footer-list-anchor"
-            itemprop="significantLink"
           >
             CONTACT
           </a>
