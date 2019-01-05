@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 import './productCardStyle.css'
-import { withProducts } from '../context/ProductProvider'
+import { withProducts } from '../../context/ProductProvider'
 
   class ProductCard extends Component{
       constructor(props){
