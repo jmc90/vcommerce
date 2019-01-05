@@ -5,3 +5,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.mappedItemsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

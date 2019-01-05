@@ -28,7 +28,7 @@
 .subscribe input {
   width: 65%;
   height: 35px;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 5px;
 }
 
@@ -37,102 +37,85 @@
     height: 100%;
   }
   .footer .grid1 {
-    padding: 0 10px;
-    font-size: 15px;
+    padding: 0 20px;
+    font-size: 20px;
   }
   .grid2 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .subscribe h2 {
-    margin: 10px 0;
-    font-size: 15px;
+    margin: 20px 0;
+    font-size: 20px;
   }
   .subscribe input {
     width: 90%;
-    height: 25px;
+    height: 20px;
   }
 }
 
 @media (max-width: 768px) and (min-width: 561px) {
   .grid1 h2 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .footer .grid1 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .grid2 h2 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .grid2 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .subscribe input {
-    font-size: 15px;
-    padding: 0 10px;
+    font-size: 20px;
+    padding: 0 20px;
   }
 }
 
-@media (max-width: 560px) and (min-width: 425px) {
+@media (max-width: 560px) and (min-width: 420px) {
   .grid1 h2 {
     font-size: 13px;
   }
   .footer .grid1 {
-    font-size: 12px;
+    font-size: 20px;
     line-height: 20px;
   }
   .grid1 {
-    font-size: 12px;
+    font-size: 20px;
   }
   .grid2 h2 {
-    font-size: 12px;
+    font-size: 20px;
   }
   .grid2 {
-    font-size: 12px;
+    font-size: 20px;
   }
   .subscribe input {
-    font-size: 12px;
-    padding: 0 10px;
+    font-size: 20px;
+    padding: 0 20px;
   }
   .subscribe h2 {
     text-align: center;
-    font-size: 12px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 424px) {
   .grid1 h2 {
-    font-size: 10px;
+    font-size: 20px;
   }
   .footer .grid1 {
-    font-size: 10px;
+    font-size: 20px;
     line-height: 20px;
     padding: 0;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   .grid1 {
-    font-size: 10px;
+    font-size: 20px;
   }
   .grid2 h2 {
-    font-size: 10px;
+    font-size: 20px;
   }
   .grid2 {
-    font-size: 10px;
-  }
-  .subscribe input {
-    font-size: 10px;
-    padding: 0 10px;
-    width: 100%;
-    height: 25px;
-    margin-top: 15px;
-  }
-  .subscribe h2 {
-    text-align: center;
-    font-size: 10px;
-  }
-  .footer .brands p {
-    font-size: 15px;
-  }
-  .footer h5 {
-    font-size: 8px;
+    font-size: 20px;
   }
 }

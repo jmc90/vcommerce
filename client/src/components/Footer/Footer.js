@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="grid1">
-        <h2>grid1</h2>
+        <h5>grid1</h5>
       </div>
       <div className="grid2">
-        <h2>grid2</h2>
+        <h5>grid2</h5>
       </div>
       <div className="grid3">
         <div className="subscribe">
-          <h2>Subscribe To Our Newsletter:</h2>
+          <h5>Subscribe To Our Newsletter:</h5>
           <input type="text" placeholder="Email" />
         </div>
       </div>
