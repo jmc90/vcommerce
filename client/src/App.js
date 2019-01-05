@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import NavbarComponent from './components/Navbar'
-import LoginForm from './components/LoginForm'
-import RegisterForm from './components/RegisterForm'
-import Profile from './components/Profile'
+import NavbarComponent from './components/Navbar/Navbar'
+import LoginForm from './components/Login/LoginForm'
+import RegisterForm from './components/Register/RegisterForm'
+import Profile from './components/Profile/Profile'
 import Store from './components/Store'
 import Home from './components/Home'
-import About from './components/About'
-import Cart from './components/Cart'
+import About from './components/About/About'
+import Cart from './components/Cart/Cart'
 import Footer from './components/Footer/Footer'
 import { Switch, Route } from "react-router-dom";
 
