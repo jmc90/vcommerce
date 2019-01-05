@@ -4,7 +4,7 @@ import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Profile from './components/Profile'
 import Store from './components/Store'
-import Home from './components/Home'
+import HomePage from './components/HomePage/HomePage'
 import About from './components/About'
 import Cart from './components/Cart'
 import Footer from './components/Footer/Footer'
@@ -17,7 +17,7 @@ class App extends Component {
         <main>
           <NavbarComponent/>
           <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={HomePage} />
               <Route path="/store" component={Store} />
               <Route path="/about" component={About} />
               <Route path="/login" component={LoginForm} />
