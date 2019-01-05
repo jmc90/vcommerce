@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Jumbotron, Container } from 'reactstrap';
 import CryptoMiningClip from '../..//styles/media/crypto-mining.mp4'
 
-class HomePage extends Component {
-  render() {
+const HomePage = () => {
     return (
       <div>
-        <div>
-        This is the home page
-        </div>
-        <video controls>
-          <source src={CryptoMiningClip} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <Jumbotron fluid>
+        <Container fluid>
+          <video autoplay muted loop id="myVideo">
+            <source src={CryptoMiningClip} type="video/mp4"/>
+          </video>
+          <h1 className="display-3">Fluid jumbotron</h1>
+          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </Container>
+      </Jumbotron>
       </div>
     )
-  }
 }
 
 export default HomePage;
