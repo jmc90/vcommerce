@@ -17,7 +17,15 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    cart: [{
+      type: String,
+      default: []
+    }],
+    wishList: [{
+      type: String,
+      default: []
+    }]
 })
 
 userSchema.pre("save", function (next) {

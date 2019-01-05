@@ -25,7 +25,7 @@ authRouter.post('/register', (req, res, next) => {
     })
 })
 
-authRouter.post("/login", (req, res, next) => {
+authRouter.post("/logIn", (req, res, next) => {
     User.findOne({ email: req.body.email.toLowerCase() }, (err, user) => {
         if (err) return res.status(500).send(err);
         if (!user) {
