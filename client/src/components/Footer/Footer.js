@@ -1,6 +1,3 @@
-// https://codemyui.com/pure-css-responsive-footer-design/
-
-
 import React from "react";
 import "./Footer.css";
 
