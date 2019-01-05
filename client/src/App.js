@@ -4,6 +4,9 @@ import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Profile from './components/Profile'
 import Store from './components/Store'
+import HomePage from './components/HomePage/HomePage'
+import About from './components/About'
+import Cart from './components/Cart'
 import Footer from './components/Footer/Footer'
 import { Switch, Route } from "react-router-dom";
 
