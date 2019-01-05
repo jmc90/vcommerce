@@ -4,6 +4,8 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import ProductProvider from './context/ProductProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
+
 
 
 

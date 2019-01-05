@@ -9,22 +9,23 @@ import About from './components/About'
 import Cart from './components/Cart'
 import Footer from './components/Footer/Footer'
 import { Switch, Route } from "react-router-dom";
-import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className='main'>
-        <NavbarComponent/>
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/store" component={Store} />
-            <Route path="/about" component={About} />
-            <Route path="/login" component={LoginForm} />
-            <Route path="/register" component={RegisterForm} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/cart" component={Cart} />
-        </Switch>
+      <div >
+        <main>
+          <NavbarComponent/>
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/store" component={Store} />
+              <Route path="/about" component={About} />
+              <Route path="/login" component={LoginForm} />
+              <Route path="/register" component={RegisterForm} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/cart" component={Cart} />
+          </Switch>
+        </main>
         <Footer />
       </div>
     )
