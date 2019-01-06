@@ -12,10 +12,15 @@ productRouter.get('/', (req, res, next) => {
             res.status(500)
             return next(err) 
         }
-        
-        const allProducts = await axios.get(`https://api.bestbuy.com/v1/products((search=gpu))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=bestSellingRank.asc&pageSize=20&format=json`)
+// similar joining crypto symbol (bbuy sku) from backend to live api
+        // const cryptoPrices = Array.from(new Set(investments.map(investment => investment.symbol))).join(',')     
+        // const cryptoPriceGet = await axios.get(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=${cryptoPrices}&tsyms=USD&api_key=85902babd490353363f521ff093d32bdc35fed2f3d9c30d77158e7bb3eff335e`)
+        // return res.status(200).send({investments, cryptoPriceGet: cryptoPriceGet.data})
 
-        return res.status(200).send(products)
+        const SKUs = Array.from(new Set(products.map(product => product.symbol))).join(',')
+        const allProducts = await axios.get(`https://api.bestbuy.com/v1/products((search=gpu))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=bestSellingRank.asc&pageSize=20&format=json`)
+        return res.status(200).send(products, allProducts)
+        
     })
 })
 
