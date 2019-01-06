@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody,
   CardSubtitle, Button } from 'reactstrap';
 import './productCardStyle.css';
 import { withProducts } from '../../context/ProductProvider';
-import ProductDetail from '../Product Detail/ProductDetail';
+import ProductDetail from '../ProductDetail/ProductDetail';
 import { Switch, Route, Link } from "react-router-dom";
 
   class ProductCard extends Component{
@@ -45,7 +45,8 @@ import { Switch, Route, Link } from "react-router-dom";
                             <CardSubtitle> ${price} </CardSubtitle>
                             <CardText> {description} </CardText>
                             <div className='buttonContainer'>
-                                <Button>View Details</Button>
+                            <Link to="/productDetail"> <Button>View Details</Button> </Link>
+                                
                             </div>
                             </CardBody>
 
