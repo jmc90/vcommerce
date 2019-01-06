@@ -34,10 +34,11 @@ import { Switch, Route, Link } from "react-router-dom";
                 let price = item.price
                 let description = item.description
                 let image = item.imageUrl
+                let id = item._id
                 
                 return (
                     
-                    <div style={{width: '318px'}} className='productCard'>
+                    <div style={{width: '318px'}} className='productCard' >
                         <Card>
                             <CardImg top width="100%" height='200px' src={image} alt="Card image cap" />
                             <CardBody>
@@ -46,7 +47,7 @@ import { Switch, Route, Link } from "react-router-dom";
                             <CardSubtitle> ${price} </CardSubtitle>
                             <CardText> {description} </CardText>
                             <div className='buttonContainer'>
-                            <Link to="/productDetail"> <Button>View Details</Button> </Link>
+                            <Link to="/productDetail"> <Button id={id}>View Details</Button> </Link>
                                 
                             </div>
                             </CardBody>
