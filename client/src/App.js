@@ -7,7 +7,9 @@ import Store from './components/Store/Store'
 import HomePage from './components/HomePage/HomePage'
 import About from './components/About/About'
 import Cart from './components/Cart/Cart'
+import Wishlist from './components/Wishlist/Wishlist'
 import Footer from './components/Footer/Footer'
+import ProductDetail from './components/ProductDetail/ProductDetail'
 import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -24,6 +26,8 @@ class App extends Component {
               <Route path="/register" component={RegisterForm} />
               <Route path="/profile" component={Profile} />
               <Route path="/cart" component={Cart} />
+              <Route path="/wishlist" component={Wishlist} />
+              <Route path="/productDetail" component={ProductDetail} />
           </Switch>
         </main>
         <Footer />

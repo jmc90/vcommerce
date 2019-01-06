@@ -41,10 +41,11 @@ import {
                   <Link to="/"> Home </Link>
                   <Link to="/store"> Store </Link>
                   <Link to="/about"> About </Link>
-                  <Link to="/cart"> Cart</Link>
-                  <Link to="/profile"> Profile</Link>
-                  <Link to="/register"> Register</Link>
-                  <Link to="/login"> Login</Link>
+                  <Link to="/wishlist"> Wishlist </Link>
+                  <Link to="/cart"> Cart </Link>
+                  <Link to="/profile"> Profile </Link>
+                  <Link to="/register"> Register </Link>
+                  <Link to="/login"> Login </Link>
               </NavItem>
             </Nav>
           </Collapse>
