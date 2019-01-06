@@ -5,15 +5,7 @@ import CryptoMiningClip from '../..//styles/media/crypto-mining-lg.mp4'
 const HomePage = () => {
     return (
       <div>
-      <Jumbotron fluid>
-        <Container fluid>
-          <video autoplay muted loop id="myVideo">
-            <source src={CryptoMiningClip} type="video/mp4"/>
-          </video>
-          <h1 className="display-3">Fluid jumbotron</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </Container>
-      </Jumbotron>
+      
       </div>
     )
 }
