@@ -14,7 +14,7 @@ import { Button } from 'reactstrap';
             height: '300px', 
             backgroundImage: `url(${this.props.selectedItemDetails[0].imageUrl})`,
             backgroundPosition: 'center',
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat'
         }
       }

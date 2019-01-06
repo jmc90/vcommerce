@@ -7,7 +7,7 @@ const HomePage = () => {
       <div>
       <Jumbotron fluid>
         <Container fluid>
-          <video autoplay muted loop id="myVideo">
+          <video autoPlay muted loop id="myVideo">
             <source src={CryptoMiningClip} type="video/mp4"/>
           </video>
           <h1 className="display-3">Fluid jumbotron</h1>

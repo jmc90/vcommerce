@@ -35,7 +35,7 @@ class ProductProvider extends Component {
                 subtitle: 'they love snow!',
                 price: '73',
                 description: 'some text here about how fun owning a penguin is',
-                imageUrl: 'https://www.thespruce.com/thmb/_ZfVlpf2Y-jCWeDI_K77qwyMv-w=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/emperor-toboggan-58a6cb933df78c345b45970c.jpg',
+                imageUrl: 'https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/istock-511366776.jpg?itok=cWhdWNZ8&resize=1100x1100',
                 _id: 12345678,
                 sku: 234567
                 },

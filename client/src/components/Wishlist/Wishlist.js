@@ -23,13 +23,18 @@ import { withProducts } from '../../context/ProductProvider';
             let sku = item.sku
             
             return (
-                <tr>
+                <tr key={sku}>
                     <td> { title } </td>
                     <td> ${ price } </td> 
                     <td> { quantity } </td>
                     <td> ${ quantity * price } </td>
-                    <button onClick={this.handleRemoveItem} id={sku}>Remove Item</button>
-                    <button>Add To Cart</button>
+                    <td>
+                        <button onClick={this.handleRemoveItem} id={sku}>Remove Item</button>
+                    </td>
+                    <td>
+                        <button>Add To Cart</button>
+                    </td>
+                    
                 </tr>
             )
         })
@@ -37,13 +42,15 @@ import { withProducts } from '../../context/ProductProvider';
         return (
             <div>
                 <table >
-                    <tr>
-                        <th>Item</th>
-                        <th>Price</th> 
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                    {row}
+                    <tbody>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th> 
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                        {row}
+                    </tbody>
                 </table>
             </div>
         );

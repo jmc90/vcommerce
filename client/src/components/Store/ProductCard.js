@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { Card, CardImg, CardText, CardBody,
+import { Card, CardText, CardBody,
   CardSubtitle, Button } from 'reactstrap';
 import './productCardStyle.css';
 import { withProducts } from '../../context/ProductProvider';
@@ -34,12 +34,18 @@ import { Link } from "react-router-dom";
                 let image = item.imageUrl
                 let id = item._id
                 let sku = item.sku
-                
                 return (
                     
-                    <div style={{width: '318px'}} className='productCard' >
+                    <div style={{width: '318px'}} className='productCard' key={id}>
                         <Card>
-                            <CardImg top width="100%" height='200px' src={image} alt="Card image cap" />
+                            <div style= {{
+                                            width: '100%',
+                                            height: '300px', 
+                                            backgroundImage: `url(${image})`,
+                                            backgroundPosition: 'center',
+                                            backgroundSize: 'contain',
+                                            backgroundRepeat: 'no-repeat'}}>
+                            </div>
                             <CardBody>
                             <h4> {title} </h4>
                             <CardSubtitle> {subtitle} </CardSubtitle>
