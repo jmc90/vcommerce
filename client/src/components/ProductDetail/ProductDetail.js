@@ -8,10 +8,6 @@ import { Button } from 'reactstrap';
         this.state = {
             product: {},
             quantity: 1,
-            selectedItemTitle: '',
-            selectedItemSubtitle: '',
-            selectedItemPrice: 0,
-            selectedItemDescription: '',
         }
         this.imageStyles = {
             width: '300px',
@@ -24,12 +20,6 @@ import { Button } from 'reactstrap';
       }
     
     componentDidMount() {
-        this.setState({
-            selectedItemTitle: this.props.selectedItemDetails[0].title,
-            selectedItemSubtitle: this.props.selectedItemDetails[0].subtitle,
-            selectedItemPrice: this.props.selectedItemDetails[0].price,
-            selectedItemDescription: this.props.selectedItemDetails[0].description,
-        })
     }
 
     handleChange = (e) => {
@@ -63,13 +53,13 @@ import { Button } from 'reactstrap';
     render(){
         return (
             <div>
-                <h2> {this.state.selectedItemTitle}</h2>
-                <h4>{this.state.selectedItemSubitle}</h4>
+                <h2> {this.props.selectedItemDetails[0].title}</h2>
+                <h4>{this.props.selectedItemDetails[0].subtitle}</h4>
 
                 <div style={this.imageStyles}></div>
 
-                <h6>${this.state.selectedItemPrice}</h6>
-                <p>{this.state.selectedItemDescription}</p>
+                <h6>${this.props.selectedItemDetails[0].price}</h6>
+                <p>{this.props.selectedItemDetails[0].description}</p>
                 <form name='quantityForm'>
                     <input  name='quantity'
                             type='number' 
