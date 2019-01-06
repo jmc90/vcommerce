@@ -43,7 +43,8 @@ import { Button } from 'reactstrap';
     }
 
     handleAddWishlist = () => {
-
+        let wishlistItem =  { 'sku': this.props.selectedItemSku, 'quantity': parseInt(this.state.quantity) }
+        this.props.handleAddItemToWishlist(wishlistItem)
     }
     
     handleAddCart = () => {

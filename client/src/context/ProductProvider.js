@@ -57,7 +57,8 @@ class ProductProvider extends Component {
                 },
             ],
             selectedItemSku: 0,
-            selectedItemDetails: {}
+            selectedItemDetails: {},
+            currentWishlist: []
         }
     }
 
@@ -73,9 +74,11 @@ class ProductProvider extends Component {
         const correctItem = itemsArray.filter(item => item.sku === sku2);
         this.setState({
             selectedItemDetails: correctItem
-        }, 
-        // () => console.log(this.state.selectedItemDetails) 
-        )
+        })
+    }
+
+    handleAddItemToWishlist = (wishlistItem) => {
+        this.state.currentWishlist.push(wishlistItem)
     }
 
     render(){
@@ -86,6 +89,8 @@ class ProductProvider extends Component {
                    setSelectedItemSku: this.setSelectedItemSku,
                    selectedItemSku: this.state.selectedItemSku,
                    selectedItemDetails: this.state.selectedItemDetails,
+                   handleAddItemToWishlist: this.handleAddItemToWishlist,
+                   currentWishlist: this.state.currentWishlist,
                 }}>
                 { this.props.children }
             </ProductContext.Provider>
