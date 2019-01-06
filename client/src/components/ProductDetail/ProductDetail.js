@@ -8,29 +8,28 @@ import { Button } from 'reactstrap';
         this.state = {
             product: {},
             quantity: 1,
-            //  This ImageTest varible is the link used for backgound image.  It will be changed to pull dynamically from this.state.product.image
-            imageTest: "https://nestle.promo.eprize.com/hotpockets18/public/COMPILED/images/hero.214d902f519f6eecfa538c5b826013f6.jpg"   
+            selectedItemTitle: '',
+            selectedItemSubtitle: '',
+            selectedItemPrice: 0,
+            selectedItemDescription: '',
         }
         this.imageStyles = {
             width: '300px',
             height: '300px', 
-            backgroundImage: `url(${this.state.imageTest})`,
+            backgroundImage: `url(${this.props.selectedItemDetails[0].imageUrl})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
-
         }
       }
     
     componentDidMount() {
-       //   Will need to do an axios request here to pull details from database of specific product they clicked on in order to render the product details page for that specific item.
-
-    // axios.get(`http://api.mysite.com/services/${this.props.match.params.productId}`)
-    //     .then(response => {
-    //         this.setState({
-    //             service: response.data
-    //         });
-    //     });
+        this.setState({
+            selectedItemTitle: this.props.selectedItemDetails[0].title,
+            selectedItemSubtitle: this.props.selectedItemDetails[0].subtitle,
+            selectedItemPrice: this.props.selectedItemDetails[0].price,
+            selectedItemDescription: this.props.selectedItemDetails[0].description,
+        })
     }
 
     handleChange = (e) => {
@@ -62,16 +61,15 @@ import { Button } from 'reactstrap';
     }
 
     render(){
-          console.log(this.image)
         return (
             <div>
-                <h2> Lets Put product name here</h2>
-                <h4>Product Subtitle goes here</h4>
+                <h2> {this.state.selectedItemTitle}</h2>
+                <h4>{this.state.selectedItemSubitle}</h4>
 
                 <div style={this.imageStyles}></div>
 
-                <h6>Put a price here</h6>
-                <p>Product description will go here</p>
+                <h6>${this.state.selectedItemPrice}</h6>
+                <p>{this.state.selectedItemDescription}</p>
                 <form name='quantityForm'>
                     <input  name='quantity'
                             type='number' 
