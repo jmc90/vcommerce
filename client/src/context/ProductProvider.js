@@ -53,8 +53,6 @@ class ProductProvider extends Component {
         }
     }
 
-
-
     render(){
         return (
             <ProductContext.Provider 
