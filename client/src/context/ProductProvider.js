@@ -78,7 +78,15 @@ class ProductProvider extends Component {
     }
 
     handleAddItemToWishlist = (wishlistItem) => {
-        this.state.currentWishlist.push(wishlistItem)
+        const itemsArray = this.state.testDatabase
+        const itemSku = parseInt(wishlistItem.sku)
+        const itemQuantity = wishlistItem.quantity
+        let foundItemDetails = itemsArray.filter(item => item.sku === itemSku) 
+        let itemForWishlist = {'title': foundItemDetails[0].title,
+                            'price': parseInt(foundItemDetails[0].price),
+                            'quantity': itemQuantity, 
+                            'sku': itemSku }
+        this.state.currentWishlist.push(itemForWishlist)
     }
 
     render(){
