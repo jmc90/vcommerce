@@ -1,17 +1,12 @@
 import React, { Component} from 'react';
+import withProducts from '../../context/BestBuyProvider'
 import ProductCard from './ProductCard'
 import './storeStyle.css'
 
   class Store extends Component{
-      constructor(){
-          super()
-          this.state = {
-              products: []
-          }
-      }
-
-      
-
+    componentDidMount(){
+        this.props.getProducts() 
+    }
 
     render(){
         return (
@@ -25,4 +20,4 @@ import './storeStyle.css'
     }
 };
 
-export default Store;
+export default withProducts(Store)
