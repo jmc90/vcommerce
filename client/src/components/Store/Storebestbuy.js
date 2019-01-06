@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import withProducts from '../../context/BestBuyProvider'
+import withProducts from '../../context/BBuyProvider'
 import ProductCard from './ProductCard'
 import './storeStyle.css'
 
