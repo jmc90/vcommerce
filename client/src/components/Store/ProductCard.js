@@ -26,6 +26,9 @@ import { Switch, Route, Link } from "react-router-dom";
         })
     }
 
+    handleClick = () => {
+        
+    }
 
     render(){
             let mappedItems = this.props.testDatabase.map(item => {
@@ -34,6 +37,7 @@ import { Switch, Route, Link } from "react-router-dom";
                 let price = item.price
                 let description = item.description
                 let image = item.imageUrl
+                let id = item._id
                 
                 return (
                     
@@ -46,7 +50,7 @@ import { Switch, Route, Link } from "react-router-dom";
                             <CardSubtitle> ${price} </CardSubtitle>
                             <CardText> {description} </CardText>
                             <div className='buttonContainer'>
-                            <Link to="/productDetail"> <Button>View Details</Button> </Link>
+                            <Link to="/productDetail"> <Button id={id} onClick={this.handleClick}>View Details</Button> </Link>
                                 
                             </div>
                             </CardBody>
@@ -57,7 +61,7 @@ import { Switch, Route, Link } from "react-router-dom";
                                 <div>
                                     {this.props.testDatabase.map(product => <Link to={`/products/${product._id}`} key={product._id}>{product.name}</Link>)}
                                 </div>
-                                <Switch> link here
+                                <Switch> 
                                     {/* I can not pull props from browser router below.  I believe this is the only thing preventing dynaimic routes from working */}
                                     {/* <Route path={`${this.props.match.url}/:productId`} component={ProductDetail} /> */}
                                 </Switch>
