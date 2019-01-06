@@ -89,6 +89,13 @@ class ProductProvider extends Component {
         this.state.currentWishlist.push(itemForWishlist)
     }
 
+    handleRemoveItemFromWishlist = (removedItem) => {
+        const itemsWishlist = this.state.currentWishlist
+        const removeItemSku = parseInt(removedItem)
+        let newWishlist = itemsWishlist.filter(item => item.sku !== removeItemSku )
+        this.setState({currentWishlist: newWishlist })
+    }
+
     render(){
         return (
             <ProductContext.Provider 
@@ -99,6 +106,7 @@ class ProductProvider extends Component {
                    selectedItemDetails: this.state.selectedItemDetails,
                    handleAddItemToWishlist: this.handleAddItemToWishlist,
                    currentWishlist: this.state.currentWishlist,
+                   handleRemoveItemFromWishlist: this.handleRemoveItemFromWishlist
                 }}>
                 { this.props.children }
             </ProductContext.Provider>
