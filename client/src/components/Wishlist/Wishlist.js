@@ -9,12 +9,18 @@ import { withProducts } from '../../context/ProductProvider';
         }
     }
 
+    handleRemoveItem = (e) => {
+        let removedItem = e.target.id
+        this.props.handleRemoveItemFromWishlist(removedItem)
+    }
+
     render(){
 
         let row = this.props.currentWishlist.map(item => {
             let title = item.title
             let price = item.price
             let quantity = item.quantity
+            let sku = item.sku
             
             return (
                 <tr>
@@ -22,7 +28,8 @@ import { withProducts } from '../../context/ProductProvider';
                     <td> ${ price } </td> 
                     <td> { quantity } </td>
                     <td> ${ quantity * price } </td>
-                    <button>remove item</button>
+                    <button onClick={this.handleRemoveItem} id={sku}>Remove Item</button>
+                    <button>Add To Cart</button>
                 </tr>
             )
         })
