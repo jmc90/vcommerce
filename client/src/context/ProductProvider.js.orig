@@ -53,6 +53,11 @@ class ProductProvider extends Component {
         }
     }
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> f8f30e21e7654238a6561374292c8ec96117ee5f
     render(){
         return (
             <ProductContext.Provider 

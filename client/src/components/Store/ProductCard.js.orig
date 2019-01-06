@@ -3,8 +3,12 @@ import { Card, CardImg, CardText, CardBody,
   CardSubtitle, Button } from 'reactstrap';
 import './productCardStyle.css';
 import { withProducts } from '../../context/ProductProvider';
+<<<<<<< HEAD
 // import { withProducts } from '../../context/BestBuyProvider'
 import ProductDetail from '../Product Detail/ProductDetail';
+=======
+import ProductDetail from '../ProductDetail/ProductDetail';
+>>>>>>> f8f30e21e7654238a6561374292c8ec96117ee5f
 import { Switch, Route, Link } from "react-router-dom";
 
   class ProductCard extends Component{
