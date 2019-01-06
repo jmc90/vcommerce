@@ -6,9 +6,9 @@ import './storeStyle.css'
       constructor(){
           super()
           this.state = {
+              products: []
           }
       }
-
 
     render(){
         return (
