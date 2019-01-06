@@ -1,5 +1,5 @@
 // testing best buy api 
-// when complete, replace ProductProvider (with test database)
+// when complete, replace Provider (with test database)
 
 // https://api.bestbuy.com/v1/products((search=gpu))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=bestSellingRank.asc&pageSize=20&format=json
 
@@ -7,9 +7,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-const ProductContext = React.createContext()
+const BBuyContext = React.createContext()
 
-class ProductProvider extends Component {
+class BBuyProvider extends Component {
     constructor() {
         super()
         this.state = []
@@ -54,7 +54,7 @@ class ProductProvider extends Component {
 
     render(){
         return(
-            <ProductContext.Provider
+            <BBuyContext.Provider
                 value={{
                     currentProducts: this.state.currentProducts,
                     getProducts: this.getProducts,
@@ -63,17 +63,17 @@ class ProductProvider extends Component {
                     handleEditRouter: this.handleEditRouter
                 }}>
                 { this.props.children }
-            </ProductContext.Provider>
+            </BBuyContext.Provider>
         )
     }
 }
 
-export default ProductProvider
+export default BBuyProvider
 
 export const withProducts = C => props => (
-    <ProductContext.Consumer>
+    <BBuyContext.Consumer>
         {value => <C {...props} {...value} />}
-    </ProductContext.Consumer>
+    </BBuyContext.Consumer>
 )
 
 

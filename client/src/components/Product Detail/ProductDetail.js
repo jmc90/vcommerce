@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import { withProducts } from '../../context/ProductProvider'
-// import { withProducts } from '../../context/BestBuyProvider'
+// import { withProducts } from '../../context/BBuyProvider'
 
 
   class ProductDetails extends Component{

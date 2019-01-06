@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody,
 import './productCardStyle.css';
 import { withProducts } from '../../context/ProductProvider';
 <<<<<<< HEAD
-// import { withProducts } from '../../context/BestBuyProvider'
+// import { withProducts } from '../../context/BBuyProvider'
 import ProductDetail from '../Product Detail/ProductDetail';
 =======
 import ProductDetail from '../ProductDetail/ProductDetail';
