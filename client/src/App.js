@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import NavbarComponent from './components/Navbar/Navbar'
+import Header from './components/Header/Header'
+// import NavbarComponent from './components/Navbar/Navbar'
 import LoginForm from './components/Login/LoginForm'
 import RegisterForm from './components/Register/RegisterForm'
 import Profile from './components/Profile/Profile'
@@ -18,7 +19,8 @@ class App extends Component {
     return (
       <div >
         <main>
-          <NavbarComponent/>
+          <Header />
+          {/* <NavbarComponent/> */}
           <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/store" component={Store} />
