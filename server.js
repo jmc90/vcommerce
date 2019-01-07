@@ -13,6 +13,8 @@ app.use('/api', expressJwt({secret: process.env.SECRET}))
 
 //Routes
 app.use('/auth', require('./routes/auth'))
+app.use('/products', require('./routes/products'))
+// app.use('/api/cart', require('./routes/cart'))
 
 // Mongoose Connect
 mongoose.connect('mongodb://localhost:27017/vcommerce', {useNewUrlParser: true}, () => {
@@ -21,6 +23,7 @@ mongoose.connect('mongodb://localhost:27017/vcommerce', {useNewUrlParser: true},
 
 // Global server error handler
 app.use((err, req, res, next) => {  
+    console.log(err)
     if(err.name === "UnauthorizedError"){
         res.status(err.status)
     }
