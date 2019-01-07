@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 const ProductContext = React.createContext();
 
@@ -14,11 +14,9 @@ class ProductProvider extends Component {
 
   getData = () => {
     axios
-      .get(
-        `https://api.bestbuy.com/v1/products((search=gpu))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=20&format=json`
-      )
+      .get("/products")
       .then(response => {
-        console.log(response.data);
+        console.log(response);
         this.setState({
           products: response.data.products
         });
@@ -26,22 +24,27 @@ class ProductProvider extends Component {
       .catch(err => console.log(err));
   };
 
-  getSingleProduct = (sku) => {
-    axios.get(`https://api.bestbuy.com/v1/products(sku=${sku})?apiKey=nsAkGCaJrNdxZwqGredJIoLI&format=json`).then(res => {
+  getSingleProduct = sku => {
+    axios
+      .get(`/products/${sku}`)
+      .then(res => {
+        console.log(res);
         this.setState({
-          singleProduct: res.data.products
-        })
+          singleProduct: res.data.products[0]
+        });
       })
-      .catch(err => console.log(err))
-  }
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
-      <ProductContext.Provider value={{
+      <ProductContext.Provider
+        value={{
           ...this.state,
           getData: this.getData,
           getSingleProduct: this.getSingleProduct
-      }}>
+        }}
+      >
         {this.props.children}
       </ProductContext.Provider>
     );

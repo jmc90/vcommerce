@@ -2,11 +2,20 @@ import React, { Component} from 'react';
 import { withProducts } from '../../context/ProductProvider'
 import { Button } from 'reactstrap';
 
+
+
   class ProductDetails extends Component{
       constructor(props){
         super(props)
         
-        this.imageStyles = {
+      }
+    
+    componentDidMount() {
+        this.props.getSingleProduct(this.props.match.params.id)
+    }
+    
+    render(){
+        let imageStyles = {
             width: '300px',
             height: '300px', 
             backgroundImage: `url(${this.props.singleProduct.image})`,
@@ -14,23 +23,13 @@ import { Button } from 'reactstrap';
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }
-      }
-    
-    componentDidMount() {
-
-    }
-
-
-
-    render(){
         const {name, shortDescription, regularPrice, longDescription} = this.props.singleProduct
+
         return (
             <div>
                 <h2> {name}</h2>
                 <h4>{shortDescription}</h4>
-
-                <div style={this.imageStyles}></div>
-
+                <div style={imageStyles}></div>
                 <h6>${regularPrice}</h6>
                 <p>{longDescription}</p>
             </div>

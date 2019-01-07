@@ -10,7 +10,7 @@ import {
 import "./productCardStyle.css";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({title, price, description, image, sku, getSingleProduct}) => {
+const ProductCard = ({title, price, description, image, sku}) => {
       return (
         <div style={{ width: "318px" }} className="productCard">
           <Card>
@@ -26,8 +26,8 @@ const ProductCard = ({title, price, description, image, sku, getSingleProduct}) 
               <CardSubtitle> ${price} </CardSubtitle>
               <CardText> {description} </CardText>
               <div className="buttonContainer">
-                <Link to="/productDetail">
-                  <Button onClick={() => getSingleProduct(sku)}>
+                <Link to={`/store/${sku}`}>
+                  <Button>
                     View Details
                   </Button>
                 </Link>

@@ -11,7 +11,7 @@ authRouter.post('/register', (req, res, next) => {
         }
         if(user){
             res.status(500)
-            return next(new Error("That email address already is registered to an account"))
+            return next(new Error("That email address is already registered to an account"))
         }
         const newUser = new User(req.body)
         newUser.save((err, user) => {

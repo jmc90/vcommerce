@@ -19,13 +19,13 @@ class App extends Component {
           <NavbarComponent/>
           <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route path="/store" component={Store} />
+              <Route exact path="/store" component={Store} />
               <Route path="/about" component={About} />
               <Route path="/login" component={LoginForm} />
               <Route path="/register" component={RegisterForm} />
               <Route path="/profile" component={Profile} />
               <Route path="/cart" component={Cart} />
-              <Route path="/productDetail" component={ProductDetail} />
+              <Route exacpt path="/store/:id" component={ProductDetail} />
           </Switch>
         </main>
         <Footer />
