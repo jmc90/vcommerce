@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import {
   Collapse,
   Navbar,
+  NavLink,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
  } from 'reactstrap';
  import {Link} from 'react-router-dom'
 
@@ -26,25 +31,50 @@ import {
   render() {
     return (
       <div>
+
+        <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">vCommerceStore.com</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                  <Link to="/"> Home </Link>
-                  <Link to="/store"> Store </Link>
-                  <Link to="/about"> About </Link>
-                  <Link to="/wishlist"> Wishlist </Link>
-                  <Link to="/cart"> Cart </Link>
-                  <Link to="/profile"> Profile </Link>
-                  <Link to="/register"> Register </Link>
-                  <Link to="/login"> Login </Link>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="/store">Store</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/about">About</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  My Account
+                </DropdownToggle>
+                <DropdownMenu right>
+                <DropdownItem>
+                  <Link to="/register"> Register </Link>
+                </DropdownItem>
+                  <DropdownItem>
+                  <Link to="/login"> Login </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to="/wishlist"> Wishlist </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to="/cart"> Cart </Link>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <Link to="/profile"> Profile </Link>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
-        
+      </div>
+
       </div>
     );
   }
