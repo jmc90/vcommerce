@@ -13,6 +13,7 @@ import {
   DropdownItem
  } from 'reactstrap';
  import {Link} from 'react-router-dom'
+ import './navbarStyle.css'
 
  class NavbarComponent extends Component {
   constructor(props) {
@@ -33,13 +34,14 @@ import {
       <div>
 
         <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="medium" className='myNavbar' light expand="md">
           <NavbarBrand href="/">vCommerceStore.com</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
+              
+              <NavItem >
+                <NavLink color="dark"  href="/">Home</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/store">Store</NavLink>
