@@ -91,6 +91,7 @@ import { Button } from 'reactstrap';
             backgroundImage: `url(${this.productImages[this.state.imageScrollCounter]})`
         }
         this.setState(prevState => {
+            
             return {imageScrollCounter: prevState.imageScrollCounter +1}
         })
 
