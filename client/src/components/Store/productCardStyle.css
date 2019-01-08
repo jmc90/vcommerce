@@ -1,13 +1,26 @@
-.productCard{
-    margin: 10px;
+.productCard {
+  margin: 10px;
 }
-.buttonContainer{
-    display: flex;
-    justify-content: space-evenly;
+CardImg{
+    background-color: red;
+    width: 100px;
 }
-
-.mappedItemsContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+button {
+  display: flex;
+  background-color: grey !important;
+  margin: 0 5px !important;
+  width: 120px;
+}
+.mappedItemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
