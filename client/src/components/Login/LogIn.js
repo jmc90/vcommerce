@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withUser } from '../../context/UserProvider'
-import LoginForm from './LogInForm'
+import LoginForm from './LoginForm'
 
 class LogIn extends Component {
   constructor() {

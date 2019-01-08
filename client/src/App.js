@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavbarComponent from './components/Navbar/Navbar'
-import LogIn from './components/LogIn/LogIn'
+import LogIn from './components/Login/LogIn'
 import Register from './components/Register/Register'
 import Profile from './components/Profile/Profile'
 import Store from './components/Store/Store'

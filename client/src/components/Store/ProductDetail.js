@@ -119,7 +119,7 @@ import { Button } from 'reactstrap';
                         <h6>Dimensions: {depth} x {height}</h6>
                     </div>
                     <div className='productForm'>
-                        <button onClick={this.handleImageScrollRight} >button</button>
+                        <button onClick={this.handleImageScrollRight} > Next </button>
                     <form  name='quantityForm'>
                         Quantity: <input  name='quantity'
                                 type='number' 
