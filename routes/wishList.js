@@ -1,8 +1,8 @@
 const express = require('express')
-const cartRouter = express.Router()
+const wishListRouter = express.Router()
 const User = require('../models/user')
 
-cartRouter.put('/add/:sku', (req, res, next) => {
+wishListRouter.put('/add/:sku', (req, res, next) => {
   User.findOneAndUpdate(
     {_id: req.user._id}, 
     {$push: {"cart": req.params.sku}}, 
@@ -15,7 +15,7 @@ cartRouter.put('/add/:sku', (req, res, next) => {
     })
 })
 
-cartRouter.put('/remove/:sku', (req, res, next) => {
+wishListRouter.put('/remove/:sku', (req, res, next) => {
   User.findOneAndUpdate(
     {_id: req.user._id}, 
     {$pull: {"cart": req.params.sku}}, 
@@ -29,5 +29,4 @@ cartRouter.put('/remove/:sku', (req, res, next) => {
 })
 
 
-module.exports = cartRouter
-
+module.exports = wishListRouter
