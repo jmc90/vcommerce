@@ -34,7 +34,7 @@ const ProductCard = ({ title, price, description, image, sku }) => {
             <div className="buttonContainer">
               {/* set this link to go directly to shopping cart */}
               <Link to={`/store/${sku}`}>
-                <Button>Buy Now</Button>
+                <Button>Add to Cart</Button>
               </Link>
             </div>
           </div>
