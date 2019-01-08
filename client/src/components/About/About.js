@@ -4,7 +4,10 @@ import React, { Component} from 'react';
     render(){
         return (
             <div>
-                Here is the page that is all about us
+                <div>
+                What is Cryptocurrency Mining?
+
+                </div>
             </div>
         );
     }

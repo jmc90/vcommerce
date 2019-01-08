@@ -46,8 +46,21 @@ import {
                 <NavLink href="/store">Store</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
+                <NavLink href="/calculate">Calculate</NavLink>
               </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  About Us
+                </DropdownToggle>
+                <DropdownMenu right>
+                <DropdownItem>
+                  <Link to="/about"> About Us </Link>
+                </DropdownItem>
+                  <DropdownItem>
+                  <Link to="/contact"> Contact Us </Link>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   My Account
