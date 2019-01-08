@@ -11,7 +11,6 @@ import Footer from './components/Footer/Footer'
 import ProductDetail from './components/Store/ProductDetail'
 import { Switch, Route, Redirect } from "react-router-dom";
 import { withUser } from './context/UserProvider'
-import { Switch, Route } from "react-router-dom";
 import Calculators from './components/Calculators/Calculators';
 import ContactPage from './components/ContactPage/ContactPage';
 
