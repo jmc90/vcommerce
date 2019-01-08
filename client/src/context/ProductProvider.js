@@ -28,13 +28,16 @@ class ProductProvider extends Component {
     axios
       .get(`/products/${sku}`)
       .then(res => {
-        console.log(res);
         this.setState({
           singleProduct: res.data.products[0]
         });
       })
       .catch(err => console.log(err));
   };
+
+  handleAddItemToWishlist = (wishlistItem) => {
+    // push object to wishlisht array in DB
+  }
 
   render() {
     return (
