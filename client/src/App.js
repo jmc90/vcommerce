@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavbarComponent from './components/Navbar/Navbar'
-import LoginForm from './components/Login/LoginForm'
+import LoginForm from './components/LogIn/LogInForm'
 import RegisterForm from './components/Register/RegisterForm'
 import Profile from './components/Profile/Profile'
 import Store from './components/Store/Store'
@@ -21,8 +21,8 @@ class App extends Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/store" component={Store} />
               <Route path="/about" component={About} />
-              <Route path="/login" component={LoginForm} />
-              <Route path="/register" component={RegisterForm} />
+              <Route path="/login" component={LogIn} />
+              <Route path="/register" component={Register} />
               <Route path="/profile" component={Profile} />
               <Route path="/cart" component={Cart} />
               <Route exacpt path="/store/:id" component={ProductDetail} />
