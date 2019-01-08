@@ -1,8 +1,7 @@
-import React, { Component} from 'react';
+import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
-class RegisterForm extends Component {
-  render() {
+const RegisterForm = () => {
     return (
       <Form >
           <h3>Register:</h3>
@@ -20,8 +19,7 @@ class RegisterForm extends Component {
         </FormGroup>
         <Button>Submit</Button>
       </Form>
-    );
-  }
+    )
 }
 
 export default RegisterForm
