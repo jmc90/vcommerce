@@ -1,24 +1,53 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
-const RegisterForm = () => {
+const RegisterForm = ({handleChange, handleRegister, name, email, password, errorMessage}) => {
     return (
-      <Form >
-          <h3>Register:</h3>
-          <FormGroup>
-          <Label for="exampleName">Name</Label>
-          <Input type="text" name="name" id="exampleName" placeholder="Name placeholder" />
+      <div className="page d-flex justify-content-center align-items-center">
+      <Form className="register-signin text-center rounded border border-dark" onSubmit={handleRegister}>
+        <h1>Register</h1>
+        <FormGroup>
+          <Label for="name">Name</Label>
+          <Input
+            id="name" 
+            type="text"
+            name="name"
+            value={name}
+            placeholder="First Name"
+            onChange={handleChange}
+            required />
         </FormGroup>
         <FormGroup>
-          <Label for="exampleEmail">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+          <Label for="email">Username</Label>
+          <Input
+            id="email" 
+            type="text"
+            name="email"
+            value={email}
+            placeholder="Username"
+            onChange={handleChange}
+            required />
         </FormGroup>
         <FormGroup>
-          <Label for="examplePassword">Password</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+          <Label for="password">Password</Label>
+          <Input
+            id="password" 
+            type="password"
+            name="password"
+            value={password}
+            placeholder="Password"
+            onChange={handleChange}
+            required />
         </FormGroup>
-        <Button>Submit</Button>
+        <Button>Register</Button>
+        <Link className="d-block" to="/login">Already Registered?</Link>
+        {
+          errorMessage &&
+          <p style={{color: "red"}}>{errorMessage}</p>
+        }
+
       </Form>
+    </div>
     )
 }
 
