@@ -50,4 +50,4 @@ class Register extends Component {
   }
 }
 
-export default Register
+export default withUser(Register)
