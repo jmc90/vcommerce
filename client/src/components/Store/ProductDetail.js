@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { withProducts } from '../../context/ProductProvider'
 import { Button } from 'reactstrap';
 // import { url } from 'inspector';
-
+import './storeStyle.css'
 
 
   class ProductDetails extends Component{
@@ -121,7 +121,7 @@ import { Button } from 'reactstrap';
                     <div className='productForm'>
                         <button onClick={this.handleImageScrollRight} >button</button>
                     <form  name='quantityForm'>
-                        Quantity: <input  name='quantity'
+                        Quantity: <input  name='quantity' 
                                 type='number' 
                                 placeholder='1'
                                 min='0' 
