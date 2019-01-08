@@ -16,7 +16,7 @@ class ProductProvider extends Component {
     axios
       .get("/products")
       .then(response => {
-        console.log(response);
+        // console.log(response);
         this.setState({
           products: response.data.products
         });
