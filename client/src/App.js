@@ -13,7 +13,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { withUser } from './context/UserProvider'
 import Calculators from './components/Calculators/Calculators';
 import ContactPage from './components/ContactPage/ContactPage';
-
+//test comment
 class App extends Component {
   render() {
     const {token} = this.props
