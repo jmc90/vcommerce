@@ -1,45 +1,35 @@
-#vcommFooter {
+.vcommFooter {
 	background-color: #373a48;
 	color:white;
 }
-#vcommFooter .footer-copyright{
-	background-color: #383737;
-	padding-top:3px;
-	padding-bottom:3px;
-	text-align: center;
-}
-#vcommFooter .footer-copyright p{
-	margin:10px;
-	color: #ccc;
-}
-#vcommFooter ul{
+.vcommFooter ul{
 	list-style-type: none;
     padding-left: 0;
     line-height: 1.7;
 }
-#vcommFooter h5{
+.vcommFooter h5{
 	font-size: 18px;
     color: white;
     font-weight: bold;
     margin-top: 30px;
 }
-#vcommFooter a{
+.vcommFooter a{
 	color:#d2d1d1;
 	text-decoration: none;
 }
-#vcommFooter a:hover, #vcommFooter a:focus{
+.vcommFooter a:hover, .vcommFooter a:focus{
 	text-decoration: none;
 	color:white;
 }
-#vcommFooter .myCols{
+.vcommFooter .myCols{
 	text-align: center;
 }
-#vcommFooter .social-networks{
+.vcommFooter .social-networks{
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 38px;
 }
-#vcommFooter .social-networks a{
+.vcommFooter .social-networks a{
     font-size: 32px;
     margin-right: 5px;
     margin-left: 5px;
@@ -47,26 +37,31 @@
     padding: 10px;
     transition: 0.2s;
 }
-#vcommFooter .social-networks a:hover{
+.vcommFooter .social-networks a:hover{
 	text-decoration: none;
 }
-#vcommFooter .facebook:hover{
+.vcommFooter .facebook:hover{
 	color:#0077e2;
 }
-#vcommFooter .google:hover{
+.vcommFooter .google:hover{
 	color:#ef1a1a;
 }
-#vcommFooter .twitter:hover{
+.vcommFooter .twitter:hover{
 	color: #00aced;
+}
+.vcommFooter .footer-copyright{
+	background-color: #383737;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-align: center;
+}
+.vcommFooter .footer-copyright p{
+	margin:10px;
+	color: #ccc;
 }
 
 @media screen and (max-width: 767px){
-	#vcommFooter {
+	.vcommFooter {
 		text-align: center;
 	}
-}
-
-#vcommFooter{
-	flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
 }
