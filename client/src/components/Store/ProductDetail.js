@@ -11,7 +11,9 @@ import { Button } from 'reactstrap';
         this.state = {
             quantity: 1,
             productImages: [],
-            counter: 0
+            counter: 0,
+            imageArrayHasBeenSet: false,
+            imageScrollCounter: 0
         }
         this.productImages = []
         this.imageStyles = {
@@ -22,6 +24,7 @@ import { Button } from 'reactstrap';
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }
+        this.imageScrollCounter = 0
       }
     
     componentDidMount() {
@@ -64,40 +67,40 @@ import { Button } from 'reactstrap';
         
     }
 
-    createImageArray = () => {
+    setImageArray = () => {
         const allImageArray = this.props.singleProduct.images
         allImageArray.forEach(item => {
             this.productImages.push(item.href)
         })
         console.log(this.productImages)
+        this.setState({
+            imageArrayHasBeenSet: true
+        })
     }
-   
 
     handleImageScrollRight = () => {
-        console.log('click works')
+        if (!this.state.imageArrayHasBeenSet) {
+            this.setImageArray()
+        }
+
+        console.log('Current background image: ' + this.imageStyles.backgroundImage)
+        console.log('counter: ' + this.state.imageScrollCounter)
+
         this.imageStyles = {
             ...this.imageStyles,
-            backgroundImage: `url(${this.productImages[2]})`
+            backgroundImage: `url(${this.productImages[this.state.imageScrollCounter]})`
         }
-        this.setState({
-            counter: +1
+        this.setState(prevState => {
+            return {imageScrollCounter: prevState.imageScrollCounter +1}
         })
+
+        console.log('New background image: ' + this.imageStyles.backgroundImage)
     }
         
     render(){
-        // let imageStyles = {
-        //     width: '300px',
-        //     height: '300px', 
-        //     backgroundImage: `url(${this.props.singleProduct.image})`,
-        //     backgroundPosition: 'center',
-        //     backgroundSize: 'cover',
-        //     backgroundRepeat: 'no-repeat'
-        // }
         
         const {name, shortDescription, regularPrice, longDescription, customerReviewAverage, customerReviewCount, depth, height, modelNumber} = this.props.singleProduct
-        
-        this.props.singleProduct && this.props.singleProduct.images && this.createImageArray()
-        
+       
         return (
             
             <div className='productDetailWrapper' >
