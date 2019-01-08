@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   Collapse,
   Navbar,
@@ -13,6 +13,7 @@ import {
   DropdownItem
  } from 'reactstrap';
  import {Link} from 'react-router-dom'
+ import { withUser } from '../../context/UserProvider'
 
  class NavbarComponent extends Component {
   constructor(props) {
@@ -29,9 +30,9 @@ import {
     });
   }
   render() {
+    const { token, logOut } = this.props
     return (
       <div>
-
         <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">vCommerceStore.com</NavbarBrand>
@@ -65,22 +66,33 @@ import {
                   My Account
                 </DropdownToggle>
                 <DropdownMenu right>
-                <DropdownItem>
-                  <Link to="/register"> Register </Link>
-                </DropdownItem>
+                {
+                  !token ?
+                <Fragment>
                   <DropdownItem>
-                  <Link to="/login"> Login </Link>
+                    <Link to="/register"> Register </Link>
                   </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/wishlist"> Wishlist </Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/cart"> Cart </Link>
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    <Link to="/profile"> Profile </Link>
-                  </DropdownItem>
+                    <DropdownItem>
+                    <Link to="/login"> Login </Link>
+                    </DropdownItem>
+                </Fragment>
+                    :
+                  <Fragment>
+                    <DropdownItem>
+                      <Link to="/wishlist"> Wishlist </Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link to="/cart"> Cart </Link>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                      <Link to="/profile"> Profile </Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link to="/" onClick={logOut}> Logout </Link>
+                    </DropdownItem>
+                  </Fragment>
+                  }
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
@@ -94,5 +106,5 @@ import {
 }
 
 
-export default NavbarComponent
+export default withUser(NavbarComponent)
 

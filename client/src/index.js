@@ -4,6 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 // import BBuyProvider from './context/BBuyProvider'
 import ProductProvider from './context/ProductProvider';
+import UserProvider from './context/UserProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/styles/css/index.css'
 
@@ -11,15 +12,10 @@ import '../src/styles/css/index.css'
 ReactDOM.render(
     <BrowserRouter>
         <ProductProvider>
-            <App />
+            <UserProvider>
+                <App />
+            </UserProvider>
         </ProductProvider>
     </BrowserRouter>, 
 document.getElementById('root'));
 
-// ReactDOM.render(
-//     <BrowserRouter>
-//         <BBuyProvider>
-//             <App />
-//         </BBuyProvider>
-//     </BrowserRouter>, 
-// document.getElementById('root'));

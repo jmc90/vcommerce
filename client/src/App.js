@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavbarComponent from './components/Navbar/Navbar'
-import LoginForm from './components/Login/LoginForm'
-import RegisterForm from './components/Register/RegisterForm'
+import LogIn from './components/LogIn/LogIn'
+import Register from './components/Register/Register'
 import Profile from './components/Profile/Profile'
 import Store from './components/Store/Store'
 import HomePage from './components/HomePage/HomePage'
@@ -9,12 +9,14 @@ import About from './components/About/About'
 import Cart from './components/Cart/Cart'
 import Footer from './components/Footer/Footer'
 import ProductDetail from './components/Store/ProductDetail'
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
+import { withUser } from './context/UserProvider'
 import Calculators from './components/Calculators/Calculators';
 import ContactPage from './components/ContactPage/ContactPage';
 
 class App extends Component {
   render() {
+    const {token} = this.props
     return (
       <div >
         <main>
@@ -24,8 +26,8 @@ class App extends Component {
               <Route exact path="/store" component={Store} />
               <Route path="/calculate" component={Calculators} />
               <Route path="/about" component={About} />
-              <Route path="/login" component={LoginForm} />
-              <Route path="/register" component={RegisterForm} />
+              <Route path="/login" render={routerProps => token ? <Redirect to="/"/> : <LogIn {...routerProps}/>} />
+              <Route path="/register" render={routerProps => token ? <Redirect to="/"/> : <Register {...routerProps}/>} />
               <Route path="/profile" component={Profile} />
               <Route path="/cart" component={Cart} />
               <Route path='/contact' component={ContactPage} />
@@ -38,4 +40,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withUser(App);
