@@ -14,17 +14,17 @@ const ProductCard = ({ title, price, description, image, sku }) => {
   return (
     <div style={{ width: "318px" }} className="productCard">
       <Card>
-        <CardImg
-          top
+        <CardImg className="card-img"
           width="100%"
           height="200px"
+          margin="20px"
           src={image}
           alt="Card image cap"
         />
         <CardBody>
-          <h4> {title} </h4>
+          <h4> {title.length >= 60 ? title.slice(0,60) + "..." : title} </h4>
           <CardSubtitle> ${price} </CardSubtitle>
-          <CardText> {description} </CardText>
+          <CardText> {description.length >= 80 ? description.slice(0, 80) + "[...]" : description } </CardText>
           <div className = "buttons-container"> 
             <div className="buttonContainer">
               <Link to={`/store/${sku}`}>

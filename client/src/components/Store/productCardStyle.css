@@ -1,13 +1,16 @@
 .productCard {
   margin: 10px;
 }
-CardImg{
-    background-color: red;
-    width: 100px;
-}
 .buttonContainer {
   display: flex;
   justify-content: space-evenly;
+}
+.card-img {
+  width: 100%;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  padding: 10px;
+  height: 250px !important;
 }
 .buttons-container {
   display: flex;
