@@ -39,5 +39,5 @@ class App extends Component {
     )
   }
 }
-// fix
+
 export default withUser(App);
