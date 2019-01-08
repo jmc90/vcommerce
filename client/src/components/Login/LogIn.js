@@ -32,13 +32,13 @@ class LogIn extends Component {
 
   render() {
     return (
-      <div>
+      <div className="d-flex justify-content-center m-5">
         <LoginForm
             handleChange={this.handleChange}
             handleLogIn={this.handleLogIn}
             email={this.state.email}
             password={this.state.password}
-            errorMessage={this.props.signInErrorMessage} />
+            errorMessage={this.props.logInErrorMessage} />
       </div>
     )
   }

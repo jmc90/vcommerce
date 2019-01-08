@@ -38,6 +38,7 @@ class UserProvider extends Component {
 
    logIn = userInfo => {
     axios.post('/auth/login', userInfo).then(res => {
+      console.log(res.data)
       const { token, user } = res.data
       localStorage.setItem("token", token)
       localStorage.setItem("user", JSON.stringify(user))
@@ -47,9 +48,10 @@ class UserProvider extends Component {
         logInErrorMessage: "",
         registerErrorMessage: ""
       })
-      this.getUserEntries()
     })
-    .catch(err => this.handleError(err.response.data.errMsg, 'logIn'))
+    .catch(err => {
+      this.handleError(err.response.data.errMsg, 'logIn')
+    })
   }
 
    handleError = (err, errRoute) => {
@@ -81,7 +83,9 @@ class UserProvider extends Component {
       <UserContext.Provider
         value={{
           ...this.state,
-          
+          register: this.register,
+          logIn: this.logIn,
+          logOut: this.logOut
         }}>
         {this.props.children}
       </UserContext.Provider>

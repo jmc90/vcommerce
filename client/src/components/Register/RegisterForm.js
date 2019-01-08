@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 const RegisterForm = ({handleChange, handleRegister, name, email, password, errorMessage}) => {
     return (
-      <div className="page d-flex justify-content-center align-items-center">
-      <Form className="register-signin text-center rounded border border-dark" onSubmit={handleRegister}>
+      <div>
+      <Form className="text-center rounded border border-dark p-5" onSubmit={handleRegister}>
         <h1>Register</h1>
         <FormGroup>
           <Label for="name">Name</Label>

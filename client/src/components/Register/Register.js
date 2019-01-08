@@ -26,9 +26,9 @@ class Register extends Component {
     e.preventDefault()
     console.log(this.state)
     const userInfo = {
-      username: this.state.username,
-      password: this.state.password,
-      firstName: this.state.firstName
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password
     }
     this.props.register(userInfo)
     this.clearInputs()
@@ -36,8 +36,9 @@ class Register extends Component {
 
 
   render() {
+    console.log(this.props)
     return (
-      <div>
+      <div className="d-flex justify-content-center m-5">
         <RegisterForm
           handleChange={this.handleChange}
           handleRegister={this.handleRegister}
