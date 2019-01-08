@@ -26,13 +26,13 @@ const ProductCard = ({ title, price, description, image, sku }) => {
           <CardSubtitle> ${price} </CardSubtitle>
           <CardText> {description.length >= 80 ? description.slice(0, 80) + "[...]" : description } </CardText>
           <div className = "buttons-container"> 
-            <div className="buttonContainer">
+            <div className="butContainer">
               <Link to={`/store/${sku}`}>
                 <Button>View Details</Button>
               </Link>
             </div>
-            <div className="buttonContainer">
-              {/* set this link to go directly to shopping cart */}
+            <div className="butContainer">
+              {/* set this link to go directly to cart */}
               <Link to={`/store/${sku}`}>
                 <Button>Add to Cart</Button>
               </Link>
